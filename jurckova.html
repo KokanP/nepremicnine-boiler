@@ -23,23 +23,25 @@
             background-size: cover;
             background-position: center;
         }
-        /* Styles for Modal */
-        .modal {
-            transition: opacity 0.25s ease;
-        }
-        /* Styles for Swiper Gallery */
-        .swiper-container {
+        /* Scoped Swiper styles ONLY for apartment sliders */
+        #stanovanja .apartment-slider {
+            position: relative;
             width: 100%;
             height: 100%;
         }
-        .swiper-button-next, .swiper-button-prev {
+        #stanovanja .apartment-slider .swiper-button-next,
+        #stanovanja .apartment-slider .swiper-button-prev {
             color: #ffffff;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             width: 44px;
             height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .swiper-button-next:after, .swiper-button-prev:after {
+        #stanovanja .apartment-slider .swiper-button-next:after,
+        #stanovanja .apartment-slider .swiper-button-prev:after {
             font-size: 18px;
             font-weight: bold;
         }
@@ -83,54 +85,6 @@
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section id="lokacija" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Kakovost bivanja na dosegu roke</h3>
-                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Vila Sončni Hrib se nahaja na odlični lokaciji na ljubljanskem Rudniku, ki ponuja popolno ravnovesje med bližino narave in urbanim udobjem.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h4 class="text-2xl font-semibold mb-6">Prednosti lokacije</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1 shrink-0">&#10003;</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr]">
-                                <strong class="font-semibold">Nakupovalno središče:</strong>
-                                <p class="text-gray-700">V neposredni bližini se nahaja nakupovalno središče Supernova Rudnik z vsemi trgovinami in storitvami.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1 shrink-0">&#10003;</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr]">
-                                <strong class="font-semibold">Odlična povezljivost:</strong>
-                                <p class="text-gray-700">Hiter in enostaven dostop do ljubljanske obvoznice omogoča preprosto pot v vse smeri.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1 shrink-0">&#10003;</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr]">
-                                <strong class="font-semibold">Narava in rekreacija:</strong>
-                                <p class="text-gray-700">Bližina hriba Golovec in sprehajalnih poti ob Ljubljanici ponuja obilo možnosti za sprostitev v naravi.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-3 mt-1 shrink-0">&#10003;</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr]">
-                                <strong class="font-semibold">Kakovost gradnje:</strong>
-                                <p class="text-gray-700">Uporabljeni so najsodobnejši materiali za visoko energetsko učinkovitost in udobno bivanje.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="rounded-lg overflow-hidden shadow-xl h-96">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.633535919428!2d14.52258367683786!3d46.02868959419138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d810216736b%3A0x268372d64733e5f3!2sJur%C4%8Dkova%20Cesta%2021b%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1724272750035!5m2!1sen!2ssi" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Apartments Section -->
     <section id="stanovanja" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -160,6 +114,7 @@
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" class="w-full h-full object-cover" alt="Kuhinja stanovanja 1"></div>
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/210552/pexels-photo-210552.jpeg" class="w-full h-full object-cover" alt="Atrij stanovanja 1"></div>
                             </div>
+                            <!-- Navigation -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -174,6 +129,7 @@
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" class="w-full h-full object-cover" alt="Dnevna soba z balkonom"></div>
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg" class="w-full h-full object-cover" alt="Spalnica stanovanja 2"></div>
                             </div>
+                            <!-- Navigation -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -212,6 +168,7 @@
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/6621472/pexels-photo-6621472.jpeg" class="w-full h-full object-cover" alt="Kopalnica v mansardi"></div>
                                 <div class="swiper-slide"><img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" class="w-full h-full object-cover" alt="Zunanjost z balkoni"></div>
                             </div>
+                            <!-- Navigation -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -220,171 +177,21 @@
             </div>
         </div>
     </section>
-    
-    <!-- Gallery Section -->
-    <section id="galerija" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Galerija</h3>
-                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Oglejte si utrinke zunanjosti, okolice in detajlov gradnje.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="rounded-lg overflow-hidden shadow-lg h-64"><img src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg" class="w-full h-full object-cover hover:scale-105 transition-transform" alt="Zunanjost hiše"></div>
-                <div class="rounded-lg overflow-hidden shadow-lg h-64"><img src="https://images.pexels.com/photos/210552/pexels-photo-210552.jpeg" class="w-full h-full object-cover hover:scale-105 transition-transform" alt="Urejena okolica"></div>
-                <div class="rounded-lg overflow-hidden shadow-lg h-64"><img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg" class="w-full h-full object-cover hover:scale-105 transition-transform" alt="Detajl fasade"></div>
-                <div class="rounded-lg overflow-hidden shadow-lg h-64"><img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" class="w-full h-full object-cover hover:scale-105 transition-transform" alt="Pogled na hišo"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="kontakt" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Stopite v stik z nami</h3>
-                    <p class="text-gray-600 mb-8">Imate vprašanje ali bi se radi dogovorili za ogled? Izpolnite obrazec ali nas pokličite. Z veseljem vam bomo odgovorili.</p>
-                    <div class="space-y-4">
-                        <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-600" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg> 041 123 456</p>
-                        <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-600" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg> info@vila-soncnihrib.si</p>
-                        <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg> Sončna ulica 1, 1000 Ljubljana</p>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <form id="contact-form">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-semibold mb-2">Ime in priimek</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email naslov</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 font-semibold mb-2">Sporočilo</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Zanimam se za..."></textarea>
-                        </div>
-                        <div class="mb-4">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" required>
-                                <span class="ml-2 text-sm text-gray-600">Strinjam se s <a href="#" id="open-privacy-modal" class="text-blue-600 hover:underline">politiko zasebnosti</a>.</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Pošlji povpraševanje</button>
-                    </form>
-                    <div id="form-message" class="mt-4 text-center"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Vila Sončni Hrib. Vse pravice pridržane.</p>
-            <p class="text-sm text-gray-400 mt-2">Izdelava spletne strani: Ime Vašega Podjetja</p>
-        </div>
-    </footer>
-
-    <!-- Tloris Modal -->
-    <div id="tloris-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="relative max-w-4xl max-h-full">
-            <img id="tloris-image" src="" alt="Tloris stanovanja" class="rounded-lg">
-            <button id="close-tloris-modal" class="absolute -top-4 -right-4 bg-white text-black rounded-full h-10 w-10 flex items-center justify-center text-2xl font-bold">&times;</button>
-        </div>
-    </div>
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="bg-white rounded-lg p-8 max-w-2xl w-full relative">
-            <h4 class="text-2xl font-bold mb-4">Politika zasebnosti</h4>
-            <p class="text-gray-700 mb-4">
-                Z izpolnitvijo in oddajo kontaktnega obrazca se strinjate, da se vaši osebni podatki (ime, priimek in e-poštni naslov) uporabijo izključno za namen vzpostavitve stika v zvezi z vašim povpraševanjem o nepremičninah, predstavljenih na tej spletni strani.
-            </p>
-            <p class="text-gray-700 mb-6">
-                Vaše podatke bomo hranili varno in jih ne bomo posredovali tretjim osebam. Izbrisani bodo takoj, ko ne bodo več potrebni za namen, za katerega so bili zbrani, oziroma v najkrajšem možnem zakonsko določenem roku.
-            </p>
-            <button id="close-privacy-modal" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition">Zapri</button>
-        </div>
-    </div>
 
     <!-- Swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // --- MOBILE MENU ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
         // --- APARTMENT SLIDERS ---
-        const swiper = new Swiper('.apartment-slider', {
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        // --- TLORIS MODAL ---
-        const tlorisModal = document.getElementById('tloris-modal');
-        const tlorisImage = document.getElementById('tloris-image');
-        const openTlorisButtons = document.querySelectorAll('.open-tloris-modal');
-        const closeTlorisButton = document.getElementById('close-tloris-modal');
-
-        openTlorisButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const imageUrl = button.getAttribute('data-tloris');
-                tlorisImage.setAttribute('src', imageUrl);
-                tlorisModal.classList.remove('opacity-0', 'pointer-events-none');
+        document.querySelectorAll('#stanovanja .apartment-slider').forEach(sliderElement => {
+            const nextEl = sliderElement.querySelector('.swiper-button-next');
+            const prevEl = sliderElement.querySelector('.swiper-button-prev');
+            new Swiper(sliderElement, {
+                loop: true,
+                navigation: {
+                    nextEl: nextEl,
+                    prevEl: prevEl,
+                },
             });
-        });
-
-        const closeTlorisModal = () => {
-            tlorisModal.classList.add('opacity-0', 'pointer-events-none');
-        };
-
-        closeTlorisButton.addEventListener('click', closeTlorisModal);
-        tlorisModal.addEventListener('click', (e) => {
-            if (e.target === tlorisModal) {
-                closeTlorisModal();
-            }
-        });
-
-        // --- PRIVACY POLICY MODAL ---
-        const privacyModal = document.getElementById('privacy-modal');
-        const openPrivacyButton = document.getElementById('open-privacy-modal');
-        const closePrivacyButton = document.getElementById('close-privacy-modal');
-
-        openPrivacyButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            privacyModal.classList.remove('opacity-0', 'pointer-events-none');
-        });
-
-        const closePrivacyModal = () => {
-            privacyModal.classList.add('opacity-0', 'pointer-events-none');
-        };
-        
-        closePrivacyButton.addEventListener('click', closePrivacyModal);
-        privacyModal.addEventListener('click', (e) => {
-             if (e.target === privacyModal) {
-                closePrivacyModal();
-            }
-        });
-
-        // --- CONTACT FORM SIMULATION ---
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            formMessage.textContent = 'Hvala za vaše sporočilo! Kmalu vas bomo kontaktirali.';
-            formMessage.className = 'mt-4 text-center text-green-700 bg-green-100 p-3 rounded-lg';
-            contactForm.reset();
-            setTimeout(() => {
-                formMessage.textContent = '';
-                formMessage.className = 'mt-4 text-center';
-            }, 5000);
         });
     </script>
 </body>
